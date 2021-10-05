@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-registro {
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+    background: #fdfdfd;
+    text-align: left;
+    border: solid 1px;
+    border-radius: 20px;
+}
+
+.form-logo {
+    width: 600px;
+    height: 400px;
+    margin: 10px;
+    background: #faf6f6;
+}
+
+h2 {
+    background: #0bac05;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-size: 30px;
+}
+
+h3 {
+    background: #0efd06;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.control {
+    width: 70%;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    background: #c4c2c2;
+    border-radius: 20px;
+    height: 30px;
+}
+
+.controll {
+    width: 70%;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
