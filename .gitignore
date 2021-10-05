@@ -4,6 +4,9 @@ reto_3/practica
 # .idea folder
 .idea
 
+# .vscode folder
+.vscode
+
 
 # Compiled class file
 *.class
