@@ -42,42 +42,20 @@ function ordenarArreglo(arreglo) {
     // Ordenar el arreglo por numero de documento usando funcion de comparacion
     arreglo = obtenerRegPasaporte(arreglo);
 
-    // Funcion interna que permite obtner el numero de documento de pasaporte de usuario mas grande
-    function interna(arrAux) {
-        // Objeto auxiliar base de entrada
-        let mayor = {
-            // tipoDocumento: "",
-            numeroDocumento: '0',
-            // correo : "",
-            // contrasena : ""
-        }
-
-        for (let value of arrAux) {
-            // Comparacion de numero de documento de pasaporte mas grande
-            if (value.numeroDocumento > mayor.numeroDocumento) {
-                // Se asigna el numero de documento de pasaporte mas grande al objeto auxiliar
-                mayor = value;
+    // Bucle que itera sobre los valores del arreglo
+    for (let i = 0; i < arreglo.length; i++) {
+        for (let j = i + 1; j < arreglo.length; j++) {
+            // Se intercambian los valores de posicion si el numero de documento es mayor
+            if (arreglo[i].numeroDocumento > arreglo[j].numeroDocumento) {
+                let aux = arreglo[i];
+                arreglo[i] = arreglo[j];
+                arreglo[j] = aux;
             }
         }
-        // Se elimina el objeto con el numero de documento mas grande para seguir evaluando los valores restantes
-        arrAux.splice(arrAux.indexOf(mayor), 1);
-        // Se retorna el objeto con el numero de documento mas grande
-        return mayor;
     }
-
-    // Array auxiliar que almacena los objetos ordenados
-    let aux = [];
-
-    while (arreglo.length != 0) {
-        // Se agega el objeto mayor al array auxiliar resultante de la funcion
-        aux.unshift(interna(arreglo));
-    }
-
-    // Asignacion del valor del array auxiliar al arreglo principal
-    arreglo = aux;
 
     // Constancia de informacion
-    // console.log("Arreglo ordenado por numero de documento: ")
+    console.log("Arreglo ordenado por numero de documento ASC: ")
     console.log(arreglo);
 
     return arreglo;
